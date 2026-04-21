@@ -47,7 +47,7 @@ export default function AboutPage() {
             >
               <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-gold/30 shadow-[0_0_40px_rgba(212,168,83,0.15)]">
                 <img
-                  src="/images/headshot.jpg"
+                  src="/images/headshot.png"
                   alt="Arvind Chandrashekar"
                   className="w-full h-full object-cover"
                 />
