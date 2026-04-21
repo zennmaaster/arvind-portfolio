@@ -10,7 +10,65 @@ import {
   UserPlus,
   BookOpen,
   ChevronRight,
+  Compass,
+  Users,
 } from "lucide-react";
+
+const productPrinciples = [
+  {
+    principle: "Trust is a threshold, not a gradient.",
+    elaboration:
+      "Users don't slowly lose confidence. They hit a boundary — a mismatched skin tone, a broken garment edge, a hidden opt-out — and disengage completely. Product quality below the trust threshold is wasted engineering. Above it, diminishing returns. The job is to find the line and stay above it.",
+  },
+  {
+    principle: "Measure decisions made, not studies completed.",
+    elaboration:
+      "A research function that produces reports nobody acts on is a cost center. The only metric that matters is: what product decision changed because this research existed? Every study should end at a decision, not a deck.",
+  },
+  {
+    principle: "Discovery friction kills more products than feature gaps.",
+    elaboration:
+      "Users who can't find a feature will never tell you the feature is bad. They'll tell you the product is empty. Discoverability gates everything — it has to be solved before capability.",
+  },
+  {
+    principle: "Consistency beats peak quality.",
+    elaboration:
+      "Users build mental models of how a system behaves. A rendering engine that produces brilliant output 80% of the time and broken output 20% of the time is worse than one that produces good output 100% of the time. Reliability is a trust signal. Variance is a trust destroyer.",
+  },
+  {
+    principle: "The user's intent state determines their tolerance.",
+    elaboration:
+      "A 30-second wait during casual browsing is nothing. The same 30-second wait at the moment of purchase intent is a deal-breaker. Context isn't a nice-to-have — it changes what 'fast' and 'good' mean.",
+  },
+];
+
+const culturePrinciples = [
+  {
+    principle: "Name mechanisms, don't describe patterns.",
+    elaboration:
+      "\"Users are dropping off\" is an observation. \"Loss aversion is amplified by the irreversibility framing of the delete flow\" is an insight. The difference between a junior and a senior researcher is whether they can name the behavioral mechanism operating beneath the pattern.",
+  },
+  {
+    principle: "The unit must outlast its founder.",
+    elaboration:
+      "If the research function collapses when one person leaves, it was never a function — it was a dependency. Codify everything: the operating model, the quality standards, the career progression, the intake process. Institutional knowledge belongs to the institution.",
+  },
+  {
+    principle: "Democratize insights, protect methodology.",
+    elaboration:
+      "Anyone in the organization should be able to access and act on research findings. But study design, analysis frameworks, and quality standards are not democratic — they require trained judgment. The job is to make findings open and methods rigorous.",
+  },
+  {
+    principle: "Intellectual honesty over stakeholder comfort.",
+    elaboration:
+      "When the data contradicts a leadership assumption, the research team's obligation is to the data. Framing matters — political sensitivity is a skill, not a compromise — but the finding itself is non-negotiable.",
+  },
+  {
+    principle: "Hire for behavioral instinct, train for methodology.",
+    elaboration:
+      "The ability to see a usage pattern and ask \"what's the mechanism?\" is harder to teach than any specific method. Screening assignments test whether candidates name mechanisms or just describe what they see. Method proficiency can be developed; behavioral curiosity is the raw material.",
+  },
+];
 
 const careerLadder = [
   { level: "L1", title: "Behavioral Analyst I", focus: "Execution of defined research plans under guidance" },
@@ -42,7 +100,7 @@ export default function LeadershipPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-400 mb-4"
           >
-            Pillar 3 — Leadership
+            Pillar 3 — Leadership & Philosophy
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -50,7 +108,7 @@ export default function LeadershipPage() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground"
           >
-            Built the Unit <span className="text-emerald-400">from Zero</span>
+            How I Think. <span className="text-emerald-400">What I Built.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -58,9 +116,10 @@ export default function LeadershipPage() {
             transition={{ delay: 0.3 }}
             className="mt-6 text-lg text-muted max-w-3xl"
           >
-            Founded the Foresight & Behavioral Insights Unit. Defined the charter, designed the
-            career ladder, hired the team, and authored the culture book. Built an organization
-            that outlasts its founder.
+            Principles shape decisions. Decisions shape products. Products shape organizations.
+            Every system I've designed, every team I've built, and every charter I've authored
+            traces back to a small set of convictions about how products should be built and
+            how research teams should think.
           </motion.p>
 
           <motion.div
@@ -70,7 +129,7 @@ export default function LeadershipPage() {
             className="mt-10 flex flex-wrap gap-8"
           >
             <div>
-              <div className="text-3xl font-extrabold text-emerald-400">0 → <CountUp end={6} /></div>
+              <div className="text-3xl font-extrabold text-emerald-400">0 &rarr; <CountUp end={6} /></div>
               <p className="text-sm text-muted uppercase tracking-wider">Researchers</p>
             </div>
             <div>
@@ -85,7 +144,75 @@ export default function LeadershipPage() {
         </div>
       </section>
 
-      {/* GFBI Charter */}
+      {/* On Product Building */}
+      <Section>
+        <ScrollReveal>
+          <div className="flex items-start gap-4 mb-10">
+            <div className="shrink-0 w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+              <Compass size={24} />
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                On Product Building
+              </h2>
+              <p className="text-base text-muted mt-1">
+                Principles drawn from 284 studies, 5 product lines, and patterns that repeat
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <div className="space-y-5">
+          {productPrinciples.map((p, i) => (
+            <ScrollReveal key={i} delay={i * 0.06}>
+              <div className="glass-card rounded-2xl p-7 md:p-8">
+                <h3 className="text-lg font-bold text-foreground mb-3">
+                  &ldquo;{p.principle}&rdquo;
+                </h3>
+                <p className="text-base text-muted leading-relaxed">
+                  {p.elaboration}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </Section>
+
+      {/* On Research Culture */}
+      <Section alt>
+        <ScrollReveal>
+          <div className="flex items-start gap-4 mb-10">
+            <div className="shrink-0 w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+              <Users size={24} />
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                On Research Culture
+              </h2>
+              <p className="text-base text-muted mt-1">
+                How the team is built to think — the standards behind the work
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <div className="space-y-5">
+          {culturePrinciples.map((p, i) => (
+            <ScrollReveal key={i} delay={i * 0.06}>
+              <div className="glass-card rounded-2xl p-7 md:p-8">
+                <h3 className="text-lg font-bold text-foreground mb-3">
+                  &ldquo;{p.principle}&rdquo;
+                </h3>
+                <p className="text-base text-muted leading-relaxed">
+                  {p.elaboration}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </Section>
+
+      {/* GFBI Charter — philosophy operationalized */}
       <Section>
         <ScrollReveal>
           <div className="glass-card rounded-2xl p-8 md:p-10">
@@ -98,7 +225,7 @@ export default function LeadershipPage() {
                   Foresight & Behavioral Insights Unit
                 </h3>
                 <p className="text-base text-muted mt-1">
-                  Founded and operationalized — charter, vision, stakeholder model
+                  The philosophy, operationalized
                 </p>
               </div>
             </div>
@@ -232,7 +359,7 @@ export default function LeadershipPage() {
                 {[
                   "Authored User Research Culture Book 2026",
                   "Defined research quality standards and methodological principles",
-                  "Established research-to-action framework: study prioritization → executive readout",
+                  "Established research-to-action framework: study prioritization to executive readout",
                   "Created the standard decision-support process across all product teams",
                   "Replaced ad-hoc research requests with structured intake-to-insight pipeline",
                 ].map((item) => (
