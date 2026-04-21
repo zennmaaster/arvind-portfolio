@@ -195,7 +195,7 @@ export default function ImpactPage() {
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4"
+            className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4"
           >
             Pillar 2 — Strategic Impact
           </motion.p>
@@ -227,7 +227,7 @@ export default function ImpactPage() {
               <div className="text-3xl font-extrabold text-gold">
                 <CountUp end={284} />
               </div>
-              <p className="text-xs text-muted uppercase tracking-wider">
+              <p className="text-sm text-muted uppercase tracking-wider">
                 Total Projects
               </p>
             </div>
@@ -235,7 +235,7 @@ export default function ImpactPage() {
               <div className="text-3xl font-extrabold text-gold">
                 <CountUp end={7} />
               </div>
-              <p className="text-xs text-muted uppercase tracking-wider">
+              <p className="text-sm text-muted uppercase tracking-wider">
                 Impact Stories
               </p>
             </div>
@@ -243,7 +243,7 @@ export default function ImpactPage() {
               <div className="text-3xl font-extrabold text-gold">
                 <CountUp end={5} />
               </div>
-              <p className="text-xs text-muted uppercase tracking-wider">
+              <p className="text-sm text-muted uppercase tracking-wider">
                 Product Lines
               </p>
             </div>
@@ -272,10 +272,10 @@ export default function ImpactPage() {
                 <h3 className="text-xl font-bold text-foreground mb-2">
                   Published Research
                 </h3>
-                <p className="text-sm text-muted mb-1">
+                <p className="text-base text-muted mb-1">
                   <strong className="text-foreground">FTW 2026, Manchester</strong> — &ldquo;Understanding User Responses to Virtual Try-On Through Large-Scale and Qualitative Studies&rdquo;
                 </p>
-                <p className="text-xs text-muted">
+                <p className="text-sm text-muted">
                   Co-authored with Akshat Gupta, Ian Anderson, Paul Duff. 200K+ interactions, 1,710 survey responses.
                 </p>
               </div>
@@ -283,7 +283,7 @@ export default function ImpactPage() {
                 <div className="flex items-center gap-4">
                   <div className="text-center">
                     <Mic size={18} className="mx-auto text-gold mb-1" />
-                    <p className="text-[10px] text-muted uppercase tracking-wider">IgniteCon Panelist</p>
+                    <p className="text-sm text-muted uppercase tracking-wider">IgniteCon Panelist</p>
                   </div>
                 </div>
               </div>
@@ -306,7 +306,7 @@ function ImpactCard({ story, index }: { story: ImpactStory; index: number }) {
           </div>
           <div className="flex-1">
             <h3 className="text-xl font-bold text-foreground">{story.title}</h3>
-            <p className="text-xs text-muted">
+            <p className="text-sm text-muted">
               {story.product} &middot; {story.timeframe} &middot; {story.studies} studies
             </p>
           </div>
@@ -316,7 +316,7 @@ function ImpactCard({ story, index }: { story: ImpactStory; index: number }) {
               <p className="text-2xl font-extrabold text-foreground">
                 {story.metricBefore} <span className="text-gold">→</span> {story.metricAfter}
               </p>
-              <p className="text-xs text-gold font-semibold flex items-center gap-1 justify-end">
+              <p className="text-sm text-gold font-semibold flex items-center gap-1 justify-end">
                 <ArrowUpRight size={12} /> {story.growth}
               </p>
             </div>
@@ -324,28 +324,28 @@ function ImpactCard({ story, index }: { story: ImpactStory; index: number }) {
         </div>
 
         {/* Narrative */}
-        <p className="text-sm text-muted leading-relaxed">{story.narrative}</p>
+        <p className="text-base text-muted leading-relaxed">{story.narrative}</p>
 
         {/* Key insight */}
         <div className="bg-gold/5 border border-gold/10 rounded-xl p-4">
-          <p className="text-xs font-semibold uppercase tracking-widest text-gold mb-2">
+          <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-2">
             Key Behavioral Insight
           </p>
-          <p className="text-sm text-foreground/90 leading-relaxed">
+          <p className="text-base text-foreground/90 leading-relaxed">
             {story.keyInsight}
           </p>
         </div>
 
         {/* Studies list */}
         <div>
-          <p className="text-xs font-semibold uppercase tracking-widest text-muted mb-2">
+          <p className="text-sm font-semibold uppercase tracking-widest text-muted mb-2">
             Studies
           </p>
           <div className="flex flex-wrap gap-2">
             {story.studyNames.map((name) => (
               <span
                 key={name}
-                className="text-[11px] text-muted/70 bg-white/[0.03] border border-card-border rounded-md px-2.5 py-1"
+                className="text-sm text-muted/70 bg-white/[0.03] border border-card-border rounded-md px-2.5 py-1"
               >
                 {name}
               </span>

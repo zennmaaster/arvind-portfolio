@@ -55,7 +55,7 @@ export default function MethodologyPage() {
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4"
+            className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4"
           >
             Methodology
           </motion.p>
@@ -83,13 +83,13 @@ export default function MethodologyPage() {
       {/* 10 Factors */}
       <Section>
         <ScrollReveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4">
             10 Factors
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Sentiment Factor Model
           </h2>
-          <p className="text-sm text-muted max-w-2xl mb-12">
+          <p className="text-base text-muted max-w-2xl mb-12">
             Each factor is scored on a 3-level scale (below threshold / meets threshold / exceeds)
             with surface-specific weight matrices — because what matters on a lockscreen is
             different from what matters in an app or on a TV.
@@ -101,11 +101,11 @@ export default function MethodologyPage() {
             <ScrollReveal key={factor.name} delay={i * 0.04}>
               <div className="glass-card rounded-xl p-5 flex items-start gap-4 h-full">
                 <div className="shrink-0 w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center">
-                  <span className="text-xs font-extrabold text-gold">{i + 1}</span>
+                  <span className="text-sm font-extrabold text-gold">{i + 1}</span>
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-foreground">{factor.name}</h3>
-                  <p className="text-xs text-muted mt-0.5">{factor.description}</p>
+                  <h3 className="text-base font-bold text-foreground">{factor.name}</h3>
+                  <p className="text-sm text-muted mt-0.5">{factor.description}</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -116,7 +116,7 @@ export default function MethodologyPage() {
       {/* Weight matrix concept */}
       <Section alt>
         <ScrollReveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4">
             Surface-Specific Weights
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
@@ -126,7 +126,7 @@ export default function MethodologyPage() {
 
         <ScrollReveal delay={0.1}>
           <div className="glass-card rounded-2xl p-8 overflow-x-auto">
-            <table className="w-full text-xs">
+            <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-card-border">
                   <th className="text-left py-3 pr-4 text-muted font-semibold">Factor</th>
@@ -154,7 +154,7 @@ export default function MethodologyPage() {
                     {weights.map((w, j) => (
                       <td key={j} className="text-center py-2.5 px-4">
                         <span
-                          className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
+                          className={`text-sm font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
                             w === "Critical"
                               ? "bg-red-500/15 text-red-400"
                               : w === "High"
@@ -179,13 +179,13 @@ export default function MethodologyPage() {
       {/* 16 Lenses */}
       <Section>
         <ScrollReveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4">
             Behavioral Analysis
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             16 Analytical Lenses
           </h2>
-          <p className="text-sm text-muted max-w-2xl mb-12">
+          <p className="text-base text-muted max-w-2xl mb-12">
             Integrated into the Hagar research intelligence system. Every study is analyzed
             through these lenses — not as a checklist, but as a diagnostic toolkit. The
             right lens for the right finding.
@@ -196,8 +196,8 @@ export default function MethodologyPage() {
           {lenses.map((lens, i) => (
             <ScrollReveal key={lens.name} delay={i * 0.03}>
               <div className="glass-card rounded-lg p-4 h-full">
-                <h3 className="text-xs font-bold text-foreground mb-1">{lens.name}</h3>
-                <p className="text-[11px] text-muted leading-relaxed">{lens.description}</p>
+                <h3 className="text-sm font-bold text-foreground mb-1">{lens.name}</h3>
+                <p className="text-sm text-muted leading-relaxed">{lens.description}</p>
               </div>
             </ScrollReveal>
           ))}

@@ -14,7 +14,7 @@ export default function PublicationsPage() {
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4"
+            className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4"
           >
             Publications & Credentials
           </motion.p>
@@ -38,16 +38,16 @@ export default function PublicationsPage() {
                 <BookOpen size={28} />
               </div>
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">
+                <span className="text-sm font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400">
                   Published &middot; FTW 2026
                 </span>
                 <h3 className="text-xl font-bold text-foreground mt-2">
                   Understanding User Responses to Virtual Try-On Through Large-Scale and Qualitative Studies
                 </h3>
-                <p className="text-sm text-muted mt-1">
+                <p className="text-base text-muted mt-1">
                   Fashion-Textiles-Wearables (FTW) 2026 &middot; Manchester, UK &middot; April 13–15
                 </p>
-                <p className="text-xs text-muted mt-1">
+                <p className="text-sm text-muted mt-1">
                   Co-authored with Akshat Gupta, Ian Anderson, Paul Duff
                 </p>
               </div>
@@ -56,24 +56,24 @@ export default function PublicationsPage() {
             <div className="grid md:grid-cols-3 gap-6 mb-6">
               <div className="bg-gold/5 border border-gold/10 rounded-xl p-4 text-center">
                 <div className="text-2xl font-extrabold text-gold">200K+</div>
-                <p className="text-xs text-muted mt-1">User Interactions Analyzed</p>
+                <p className="text-sm text-muted mt-1">User Interactions Analyzed</p>
               </div>
               <div className="bg-gold/5 border border-gold/10 rounded-xl p-4 text-center">
                 <div className="text-2xl font-extrabold text-gold">1,710</div>
-                <p className="text-xs text-muted mt-1">Survey Responses</p>
+                <p className="text-sm text-muted mt-1">Survey Responses</p>
               </div>
               <div className="bg-gold/5 border border-gold/10 rounded-xl p-4 text-center">
                 <div className="text-2xl font-extrabold text-gold">Multi-study</div>
-                <p className="text-xs text-muted mt-1">Qualitative Program</p>
+                <p className="text-sm text-muted mt-1">Qualitative Program</p>
               </div>
             </div>
 
             <div className="space-y-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold mb-2">
+                <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-2">
                   Key Finding
                 </p>
-                <p className="text-sm text-foreground/90 leading-relaxed">
+                <p className="text-base text-foreground/90 leading-relaxed">
                   Trust in virtual try-on operates as a <strong>binary threshold</strong>, not a gradient.
                   Minor inaccuracies in body proportion, skin tone, or facial features cause immediate
                   user dropout — not gradual decline. Session-to-session consistency matters more than
@@ -83,10 +83,10 @@ export default function PublicationsPage() {
               </div>
 
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold mb-2">
+                <p className="text-sm font-semibold uppercase tracking-widest text-gold mb-2">
                   Design Implications
                 </p>
-                <ul className="space-y-1.5 text-sm text-muted">
+                <ul className="space-y-1.5 text-base text-muted">
                   <li>&bull; Representation fidelity is a threshold condition, not a gradient</li>
                   <li>&bull; Garment fidelity is a separate trust dimension from compositing quality</li>
                   <li>&bull; Consistency over quality ceiling for trust building</li>
@@ -111,10 +111,10 @@ export default function PublicationsPage() {
                 <h3 className="text-lg font-bold text-foreground">
                   IgniteCon — Panelist
                 </h3>
-                <p className="text-sm text-muted mt-1">
+                <p className="text-base text-muted mt-1">
                   India&apos;s First User Research Conference &middot; Inaugural Edition
                 </p>
-                <p className="text-xs text-muted mt-2 leading-relaxed">
+                <p className="text-sm text-muted mt-2 leading-relaxed">
                   Panelist at the inaugural edition of IGNITE, India&apos;s first dedicated user research
                   conference organized by User Connect Consultancy. The conference brings together UX
                   researchers, design leaders, and product strategists to discuss emerging methodologies,
@@ -129,7 +129,7 @@ export default function PublicationsPage() {
       {/* Patents */}
       <Section>
         <ScrollReveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4">
             Intellectual Property
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
@@ -173,9 +173,9 @@ export default function PublicationsPage() {
                 <span className="text-gold mt-0.5">{patent.icon}</span>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
-                    <h3 className="text-sm font-bold text-foreground">{patent.title}</h3>
+                    <h3 className="text-base font-bold text-foreground">{patent.title}</h3>
                     <span
-                      className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
+                      className={`text-sm font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
                         patent.status === "Granted"
                           ? "bg-emerald-500/20 text-emerald-400"
                           : "bg-gold/20 text-gold"
@@ -184,7 +184,7 @@ export default function PublicationsPage() {
                       {patent.status}
                     </span>
                   </div>
-                  <p className="text-xs text-muted leading-relaxed">{patent.description}</p>
+                  <p className="text-sm text-muted leading-relaxed">{patent.description}</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -195,7 +195,7 @@ export default function PublicationsPage() {
       {/* Education */}
       <Section alt>
         <ScrollReveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4">
             Education
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
@@ -214,8 +214,8 @@ export default function PublicationsPage() {
               <div className="glass-card rounded-xl p-5 flex items-start gap-4">
                 <GraduationCap size={18} className="text-gold mt-0.5 shrink-0" />
                 <div>
-                  <h3 className="text-sm font-bold text-foreground">{edu.degree}</h3>
-                  <p className="text-xs text-muted">
+                  <h3 className="text-base font-bold text-foreground">{edu.degree}</h3>
+                  <p className="text-sm text-muted">
                     {edu.school} &middot; {edu.years}
                   </p>
                 </div>

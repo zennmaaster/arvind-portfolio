@@ -170,7 +170,7 @@ export default function InnovationPage() {
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-xs font-semibold uppercase tracking-[0.3em] text-electric-light mb-4"
+            className="text-sm font-semibold uppercase tracking-[0.3em] text-electric-light mb-4"
           >
             Pillar 1 — Innovation
           </motion.p>
@@ -203,19 +203,19 @@ export default function InnovationPage() {
               <div className="text-3xl font-extrabold text-electric-light">
                 <CountUp end={5} />
               </div>
-              <p className="text-xs text-muted uppercase tracking-wider">AI Systems</p>
+              <p className="text-sm text-muted uppercase tracking-wider">AI Systems</p>
             </div>
             <div>
               <div className="text-3xl font-extrabold text-electric-light">
                 <CountUp end={50} suffix="+" />
               </div>
-              <p className="text-xs text-muted uppercase tracking-wider">Total Agents</p>
+              <p className="text-sm text-muted uppercase tracking-wider">Total Agents</p>
             </div>
             <div>
               <div className="text-3xl font-extrabold text-electric-light">
                 <CountUp end={4} />
               </div>
-              <p className="text-xs text-muted uppercase tracking-wider">Patents</p>
+              <p className="text-sm text-muted uppercase tracking-wider">Patents</p>
             </div>
           </motion.div>
         </div>
@@ -224,7 +224,7 @@ export default function InnovationPage() {
       {/* Systems */}
       <Section>
         <ScrollReveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-electric-light mb-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-electric-light mb-4">
             Systems Architecture
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
@@ -244,7 +244,7 @@ export default function InnovationPage() {
       {/* Patents */}
       <Section alt>
         <ScrollReveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4">
             Intellectual Property
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
@@ -260,11 +260,11 @@ export default function InnovationPage() {
                   <span className="text-gold">{patent.icon}</span>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <h3 className="text-sm font-bold text-foreground">
+                      <h3 className="text-base font-bold text-foreground">
                         {patent.title}
                       </h3>
                       <span
-                        className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
+                        className={`text-sm font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
                           patent.status === "Granted"
                             ? "bg-emerald-500/20 text-emerald-400"
                             : "bg-gold/20 text-gold"
@@ -273,7 +273,7 @@ export default function InnovationPage() {
                         {patent.status}
                       </span>
                     </div>
-                    <p className="text-xs text-muted leading-relaxed">
+                    <p className="text-sm text-muted leading-relaxed">
                       {patent.description}
                     </p>
                   </div>
@@ -310,7 +310,7 @@ function SystemCard({
           <div className="flex flex-wrap items-center gap-3 mb-2">
             <h3 className="text-xl font-bold text-foreground">{system.name}</h3>
             <span
-              className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
+              className={`text-sm font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
                 isElectric
                   ? "bg-electric/10 text-electric-light"
                   : "bg-gold/10 text-gold"
@@ -319,10 +319,10 @@ function SystemCard({
               {system.agents} agents
             </span>
           </div>
-          <p className={`text-sm font-medium mb-3 ${isElectric ? "text-electric-light" : "text-gold"}`}>
+          <p className={`text-base font-medium mb-3 ${isElectric ? "text-electric-light" : "text-gold"}`}>
             {system.tagline}
           </p>
-          <p className="text-sm text-muted leading-relaxed mb-6">
+          <p className="text-base text-muted leading-relaxed mb-6">
             {system.description}
           </p>
 
@@ -330,7 +330,7 @@ function SystemCard({
             {system.highlights.map((h) => (
               <div key={h} className="flex items-start gap-2">
                 <span className={`mt-1.5 w-1 h-1 rounded-full shrink-0 ${isElectric ? "bg-electric-light" : "bg-gold"}`} />
-                <span className="text-xs text-muted/80">{h}</span>
+                <span className="text-sm text-muted/80">{h}</span>
               </div>
             ))}
           </div>

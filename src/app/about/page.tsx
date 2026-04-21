@@ -75,7 +75,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="mt-6 text-sm text-muted leading-relaxed max-w-2xl"
+                className="mt-6 text-base text-muted leading-relaxed max-w-2xl"
               >
                 Research and behavioral science executive with 18+ years spanning software
                 engineering, AI invention, and human behavior research. Four patents in
@@ -87,7 +87,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
-                className="mt-4 text-sm text-muted leading-relaxed max-w-2xl"
+                className="mt-4 text-base text-muted leading-relaxed max-w-2xl"
               >
                 Combines rare technical depth (computer science engineering, computer vision,
                 predictive modeling) with behavioral science rigor (Cialdini, Fogg, Kahneman,
@@ -106,13 +106,13 @@ export default function AboutPage() {
                   href="https://www.linkedin.com/in/acz532110/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-muted hover:text-gold transition-colors"
+                  className="inline-flex items-center gap-2 text-base text-muted hover:text-gold transition-colors"
                 >
                   <LinkedInIcon size={16} /> LinkedIn
                 </a>
                 <a
                   href="mailto:don.osiris@gmail.com"
-                  className="inline-flex items-center gap-2 text-sm text-muted hover:text-gold transition-colors"
+                  className="inline-flex items-center gap-2 text-base text-muted hover:text-gold transition-colors"
                 >
                   <Mail size={16} /> don.osiris@gmail.com
                 </a>
@@ -125,7 +125,7 @@ export default function AboutPage() {
       {/* Career narrative */}
       <Section>
         <ScrollReveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4">
             The Arc
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
@@ -134,7 +134,7 @@ export default function AboutPage() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <div className="max-w-3xl space-y-5 text-sm text-muted leading-relaxed">
+          <div className="max-w-3xl space-y-5 text-base text-muted leading-relaxed">
             <p>
               The career started in engineering — a Computer Science degree from Anna University
               and early roles in business development and product management. This wasn&apos;t a detour;
@@ -174,7 +174,7 @@ export default function AboutPage() {
       {/* Timeline */}
       <Section alt>
         <ScrollReveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4">
             Timeline
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
@@ -199,9 +199,9 @@ export default function AboutPage() {
                   <div className={`ml-10 md:ml-0 md:w-[calc(50%-2rem)] ${
                     i % 2 === 0 ? "md:text-right md:pr-8" : "md:text-left md:pl-8"
                   }`}>
-                    <span className="text-xs font-bold text-gold">{entry.year}</span>
-                    <h4 className="text-sm font-bold text-foreground mt-0.5">{entry.role}</h4>
-                    <p className="text-xs text-muted">{entry.org}</p>
+                    <span className="text-sm font-bold text-gold">{entry.year}</span>
+                    <h4 className="text-base font-bold text-foreground mt-0.5">{entry.role}</h4>
+                    <p className="text-sm text-muted">{entry.org}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -213,7 +213,7 @@ export default function AboutPage() {
       {/* Skills */}
       <Section>
         <ScrollReveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4">
             Capabilities
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
@@ -225,12 +225,12 @@ export default function AboutPage() {
           {skillGroups.map((group, i) => (
             <ScrollReveal key={group.title} delay={i * 0.1}>
               <div className="glass-card rounded-xl p-6 h-full">
-                <h3 className="text-sm font-bold text-foreground mb-4">{group.title}</h3>
+                <h3 className="text-base font-bold text-foreground mb-4">{group.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="text-[11px] text-muted/80 bg-white/[0.03] border border-card-border rounded-md px-2.5 py-1"
+                      className="text-sm text-muted/80 bg-white/[0.03] border border-card-border rounded-md px-2.5 py-1"
                     >
                       {skill}
                     </span>

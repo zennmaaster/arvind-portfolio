@@ -16,10 +16,10 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-sm text-muted">
+            <p className="text-base text-muted">
               Arvind Chandrashekar — Behavioral Scientist & AI Systems Architect
             </p>
-            <p className="text-xs text-muted/60 mt-1">
+            <p className="text-sm text-muted/60 mt-1">
               4 Patents &middot; 284 Research Projects &middot; 18+ Years
             </p>
           </div>

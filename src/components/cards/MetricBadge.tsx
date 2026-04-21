@@ -15,7 +15,7 @@ export function MetricBadge({ value, suffix, prefix, label }: MetricBadgeProps) 
       <div className="text-3xl md:text-4xl font-extrabold text-foreground">
         <CountUp end={value} suffix={suffix} prefix={prefix} />
       </div>
-      <p className="text-xs text-muted mt-1 uppercase tracking-wider">{label}</p>
+      <p className="text-sm text-muted mt-1 uppercase tracking-wider">{label}</p>
     </div>
   );
 }

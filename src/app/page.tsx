@@ -32,7 +32,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-sm font-medium uppercase tracking-[0.3em] text-gold mb-8"
+            className="text-base font-medium uppercase tracking-[0.3em] text-gold mb-8"
           >
             Portfolio
           </motion.p>
@@ -97,7 +97,7 @@ export default function Home() {
       <Section id="pillars">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4">
               Three Pillars
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -140,7 +140,7 @@ export default function Home() {
       {/* Credential bar */}
       <Section alt>
         <ScrollReveal>
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-xs text-muted uppercase tracking-wider">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm text-muted uppercase tracking-wider">
             <span>Glance &middot; InMobi Group</span>
             <span className="hidden md:inline text-card-border">|</span>
             <span>Co-author, FTW 2026 Manchester</span>
@@ -156,7 +156,7 @@ export default function Home() {
       <Section>
         <ScrollReveal>
           <div className="text-center mb-16">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold mb-4">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold mb-4">
               Impact At Scale
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -172,10 +172,10 @@ export default function Home() {
                 <div className="text-3xl font-extrabold text-gold mb-1">
                   {card.metric}
                 </div>
-                <div className="text-sm font-semibold text-foreground mb-2">
+                <div className="text-base font-semibold text-foreground mb-2">
                   {card.label}
                 </div>
-                <p className="text-xs text-muted leading-relaxed">
+                <p className="text-sm text-muted leading-relaxed">
                   {card.description}
                 </p>
               </div>

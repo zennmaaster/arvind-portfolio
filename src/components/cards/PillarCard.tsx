@@ -48,15 +48,15 @@ export function PillarCard({
           className={`glass-card glow-border rounded-2xl p-8 h-full bg-gradient-to-b ${accentColors[accent]}`}
         >
           <div className={`mb-6 ${accentText[accent]}`}>{icon}</div>
-          <p className={`text-xs font-semibold uppercase tracking-widest mb-2 ${accentText[accent]}`}>
+          <p className={`text-sm font-semibold uppercase tracking-widest mb-2 ${accentText[accent]}`}>
             {subtitle}
           </p>
           <h3 className="text-xl font-bold text-foreground mb-3">{title}</h3>
-          <p className="text-sm text-muted leading-relaxed mb-6">
+          <p className="text-base text-muted leading-relaxed mb-6">
             {description}
           </p>
           <span
-            className={`inline-flex items-center gap-1.5 text-sm font-medium ${accentText[accent]} group-hover:gap-2.5 transition-all`}
+            className={`inline-flex items-center gap-1.5 text-base font-medium ${accentText[accent]} group-hover:gap-2.5 transition-all`}
           >
             Explore <ArrowRight size={14} />
           </span>

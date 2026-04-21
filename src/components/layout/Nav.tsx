@@ -52,7 +52,7 @@ export function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors relative ${
+              className={`text-base font-medium transition-colors relative ${
                 pathname === link.href
                   ? "text-gold"
                   : "text-muted hover:text-foreground"
@@ -93,7 +93,7 @@ export function Nav() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium ${
+                  className={`text-base font-medium ${
                     pathname === link.href ? "text-gold" : "text-muted"
                   }`}
                 >

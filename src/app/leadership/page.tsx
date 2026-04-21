@@ -40,7 +40,7 @@ export default function LeadershipPage() {
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-400 mb-4"
+            className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-400 mb-4"
           >
             Pillar 3 — Leadership
           </motion.p>
@@ -71,15 +71,15 @@ export default function LeadershipPage() {
           >
             <div>
               <div className="text-3xl font-extrabold text-emerald-400">0 → <CountUp end={6} /></div>
-              <p className="text-xs text-muted uppercase tracking-wider">Researchers</p>
+              <p className="text-sm text-muted uppercase tracking-wider">Researchers</p>
             </div>
             <div>
               <div className="text-3xl font-extrabold text-emerald-400"><CountUp end={5} /></div>
-              <p className="text-xs text-muted uppercase tracking-wider">Career Levels</p>
+              <p className="text-sm text-muted uppercase tracking-wider">Career Levels</p>
             </div>
             <div>
               <div className="text-3xl font-extrabold text-emerald-400"><CountUp end={20} suffix="+" /></div>
-              <p className="text-xs text-muted uppercase tracking-wider">Candidates Evaluated</p>
+              <p className="text-sm text-muted uppercase tracking-wider">Candidates Evaluated</p>
             </div>
           </motion.div>
         </div>
@@ -97,7 +97,7 @@ export default function LeadershipPage() {
                 <h3 className="text-xl font-bold text-foreground">
                   Foresight & Behavioral Insights Unit
                 </h3>
-                <p className="text-sm text-muted mt-1">
+                <p className="text-base text-muted mt-1">
                   Founded and operationalized — charter, vision, stakeholder model
                 </p>
               </div>
@@ -105,7 +105,7 @@ export default function LeadershipPage() {
 
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-3">
+                <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400 mb-3">
                   What was built
                 </p>
                 <ul className="space-y-2">
@@ -116,7 +116,7 @@ export default function LeadershipPage() {
                     "Delivery cadence: weekly signals, bi-weekly sentiment, quarterly strategic",
                     "Research democratization framework — enabling non-researchers to use insights",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-muted">
+                    <li key={item} className="flex items-start gap-2 text-base text-muted">
                       <ChevronRight size={14} className="mt-0.5 shrink-0 text-emerald-400" />
                       {item}
                     </li>
@@ -124,7 +124,7 @@ export default function LeadershipPage() {
                 </ul>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-3">
+                <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400 mb-3">
                   Why it matters for VP evaluators
                 </p>
                 <ul className="space-y-2">
@@ -135,7 +135,7 @@ export default function LeadershipPage() {
                     "Created institutional knowledge — culture book, career ladder",
                     "Made the org self-sustaining — the unit outlasts its founder",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-muted">
+                    <li key={item} className="flex items-start gap-2 text-base text-muted">
                       <ChevronRight size={14} className="mt-0.5 shrink-0 text-emerald-400" />
                       {item}
                     </li>
@@ -158,7 +158,7 @@ export default function LeadershipPage() {
               <h3 className="text-2xl font-bold text-foreground">
                 5-Level Career Ladder
               </h3>
-              <p className="text-sm text-muted mt-1">
+              <p className="text-base text-muted mt-1">
                 Designed progression from execution through strategic leadership
               </p>
             </div>
@@ -170,11 +170,11 @@ export default function LeadershipPage() {
             <ScrollReveal key={level.level} delay={i * 0.08}>
               <div className="glass-card rounded-xl p-5 flex items-center gap-5">
                 <div className="shrink-0 w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center">
-                  <span className="text-sm font-extrabold text-emerald-400">{level.level}</span>
+                  <span className="text-base font-extrabold text-emerald-400">{level.level}</span>
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-sm font-bold text-foreground">{level.title}</h4>
-                  <p className="text-xs text-muted">{level.focus}</p>
+                  <h4 className="text-base font-bold text-foreground">{level.title}</h4>
+                  <p className="text-sm text-muted">{level.focus}</p>
                 </div>
                 <div className="hidden md:block">
                   <div
@@ -213,7 +213,7 @@ export default function LeadershipPage() {
                   "Built hiring rubric: behavioral depth, methodological credibility, intellectual honesty, stakeholder translation, constraint navigation",
                   "Each hire assessed on ability to name mechanisms, not just describe patterns",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-muted">
+                  <li key={item} className="flex items-start gap-2 text-base text-muted">
                     <ChevronRight size={14} className="mt-0.5 shrink-0 text-emerald-400" />
                     {item}
                   </li>
@@ -236,7 +236,7 @@ export default function LeadershipPage() {
                   "Created the standard decision-support process across all product teams",
                   "Replaced ad-hoc research requests with structured intake-to-insight pipeline",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-muted">
+                  <li key={item} className="flex items-start gap-2 text-base text-muted">
                     <ChevronRight size={14} className="mt-0.5 shrink-0 text-emerald-400" />
                     {item}
                   </li>
