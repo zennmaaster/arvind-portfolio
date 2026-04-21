@@ -12,61 +12,78 @@ import {
   ChevronRight,
   Compass,
   Users,
+  ExternalLink,
 } from "lucide-react";
 
 const productPrinciples = [
   {
+    principle: "The only war being waged is on cognition.",
+    elaboration:
+      "Search costs for quality are rising. AI delegates the thinking, but not the judgment. Every product decision is ultimately a bet on what deserves a user's finite cognitive capacity. The products that win are the ones that respect that scarcity — not the ones that exploit it.",
+    source: "The Only War That Matters",
+  },
+  {
     principle: "Trust is a threshold, not a gradient.",
     elaboration:
-      "Users don't slowly lose confidence. They hit a boundary — a mismatched skin tone, a broken garment edge, a hidden opt-out — and disengage completely. Product quality below the trust threshold is wasted engineering. Above it, diminishing returns. The job is to find the line and stay above it.",
+      "Users don't slowly lose confidence. They hit a boundary — a mismatched skin tone, a hidden opt-out, a broken garment edge — and disengage completely. Below the trust threshold, engineering investment is wasted. Above it, diminishing returns. The job is to find the line.",
+    source: "FTW 2026 Paper",
   },
   {
-    principle: "Measure decisions made, not studies completed.",
+    principle: "Taste is the last differentiator.",
     elaboration:
-      "A research function that produces reports nobody acts on is a cost center. The only metric that matters is: what product decision changed because this research existed? Every study should end at a decision, not a deck.",
+      "As AI handles production, the ability to distinguish good from mediocre becomes the only thing that matters. The danger isn't using AI for drafts — it's surrendering editorial judgment when the output appears 'good enough.' Mediocrity acceptance is the real threat. Great taste requires self-awareness about your own judgment quality.",
+    source: "Practicing for Irrelevance",
   },
   {
-    principle: "Discovery friction kills more products than feature gaps.",
+    principle: "Second-order thinking is a muscle, not a personality quirk.",
     elaboration:
-      "Users who can't find a feature will never tell you the feature is bad. They'll tell you the product is empty. Discoverability gates everything — it has to be solved before capability.",
+      "The room is full of people optimizing first-order consequences. The edge belongs to those who habitually ask: and then what? Consequences of consequences. This isn't about being smarter — it's about refusing to stop at the first answer. It applies to product roadmaps, hiring decisions, and market entry.",
+    source: "The Room Is Full of Gamblers",
   },
   {
     principle: "Consistency beats peak quality.",
     elaboration:
-      "Users build mental models of how a system behaves. A rendering engine that produces brilliant output 80% of the time and broken output 20% of the time is worse than one that produces good output 100% of the time. Reliability is a trust signal. Variance is a trust destroyer.",
+      "Users build mental models of how systems behave. A rendering engine that's brilliant 80% of the time and broken 20% is worse than one that's good 100% of the time. Reliability is a trust signal. Variance is a trust destroyer. This holds for products, for teams, and for leaders.",
+    source: "VTON Longitudinal Research",
   },
   {
-    principle: "The user's intent state determines their tolerance.",
+    principle: "Past events create cumulative effects that determine future state transitions.",
     elaboration:
-      "A 30-second wait during casual browsing is nothing. The same 30-second wait at the moment of purchase intent is a deal-breaker. Context isn't a nice-to-have — it changes what 'fast' and 'good' mean.",
+      "Markets, products, and organizations carry mechanical memory. Stress accumulates invisibly until a threshold triggers cascade failure — whether that's an AI bubble, a user trust collapse, or an org culture breakdown. The job is to read the stress field before it ruptures.",
+    source: "The Cumulative Memory of Markets",
   },
 ];
 
 const culturePrinciples = [
   {
-    principle: "Name mechanisms, don't describe patterns.",
+    principle: "Some of us want to understand the system. Some want to change it.",
     elaboration:
-      "\"Users are dropping off\" is an observation. \"Loss aversion is amplified by the irreversibility framing of the delete flow\" is an insight. The difference between a junior and a senior researcher is whether they can name the behavioral mechanism operating beneath the pattern.",
+      "I'm in the first camp — drawn to the machinations of things, systems, and people. This isn't passivity. Understanding structural mechanics is the prerequisite to changing anything that lasts. The hero narrative is appealing but fragile. The systems thinker's work compounds.",
+    source: "On Not Being a Hero",
   },
   {
-    principle: "The unit must outlast its founder.",
+    principle: "Knowing something is risky and taking on the risk is more rational than taking on a sure thing without knowing the risks.",
     elaboration:
-      "If the research function collapses when one person leaves, it was never a function — it was a dependency. Codify everything: the operating model, the quality standards, the career progression, the intake process. Institutional knowledge belongs to the institution.",
+      "Organizations reward the appearance of certainty. But informed risk-taking — where you name what you don't know and proceed anyway — is how research actually creates value. A team that hides uncertainty produces reports. A team that surfaces it produces decisions.",
+    source: "The Social Cost of Not Knowing",
   },
   {
-    principle: "Democratize insights, protect methodology.",
+    principle: "Empathy has a two-generation radius.",
     elaboration:
-      "Anyone in the organization should be able to access and act on research findings. But study design, analysis frameworks, and quality standards are not democratic — they require trained judgment. The job is to make findings open and methods rigorous.",
+      "Humans genuinely empathize with roughly two generations in either direction — grandparents and grandchildren. Beyond that, abstraction takes over. This matters for product building: your user's lived context is narrower than your persona document suggests. Design for the circle they actually inhabit, not the one you wish they did.",
+    source: "The Two-Generation Rule",
   },
   {
-    principle: "Intellectual honesty over stakeholder comfort.",
+    principle: "People compare themselves to the best person in the room and restructure their networks when they fall short.",
     elaboration:
-      "When the data contradicts a leadership assumption, the research team's obligation is to the data. Framing matters — political sensitivity is a skill, not a compromise — but the finding itself is non-negotiable.",
+      "This is the core mechanism of Comparative Moral Status Theory — validated across 3,023 users and 328,867 posts. Pre-exit silence predicts churn better than post-facto recovery. Top-ranked users show the highest behavioral volatility, not last-place ones. Every leaderboard, every team structure, every performance review activates this dynamic.",
+    source: "CMS Theory",
   },
   {
-    principle: "Hire for behavioral instinct, train for methodology.",
+    principle: "As friction disappears, so do the norms that once governed behavior.",
     elaboration:
-      "The ability to see a usage pattern and ask \"what's the mechanism?\" is harder to teach than any specific method. Screening assignments test whether candidates name mechanisms or just describe what they see. Method proficiency can be developed; behavioral curiosity is the raw material.",
+      "When ease increases, courtesy erodes. This applies to AI-generated job applications, to products that remove too many guardrails, and to organizations that optimize away all process. Some friction is load-bearing. Remove it and the structure it supported collapses.",
+    source: "The Courtesy Collapse",
   },
 ];
 
@@ -117,9 +134,8 @@ export default function LeadershipPage() {
             className="mt-6 text-lg text-muted max-w-3xl"
           >
             Principles shape decisions. Decisions shape products. Products shape organizations.
-            Every system I've designed, every team I've built, and every charter I've authored
-            traces back to a small set of convictions about how products should be built and
-            how research teams should think.
+            These convictions — tested across 284 studies, validated in published research, and
+            argued through in writing — are the foundation everything else is built on.
           </motion.p>
 
           <motion.div
@@ -153,10 +169,10 @@ export default function LeadershipPage() {
             </div>
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                On Product Building
+                On Building Products
               </h2>
               <p className="text-base text-muted mt-1">
-                Principles drawn from 284 studies, 5 product lines, and patterns that repeat
+                Convictions earned from research, argued through in writing
               </p>
             </div>
           </div>
@@ -169,8 +185,22 @@ export default function LeadershipPage() {
                 <h3 className="text-lg font-bold text-foreground mb-3">
                   &ldquo;{p.principle}&rdquo;
                 </h3>
-                <p className="text-base text-muted leading-relaxed">
+                <p className="text-base text-muted leading-relaxed mb-4">
                   {p.elaboration}
+                </p>
+                <p className="text-sm text-muted/50 italic">
+                  {p.source.startsWith("FTW") || p.source.startsWith("VTON") ? (
+                    p.source
+                  ) : (
+                    <a
+                      href={`https://zennmaster.substack.com/p/${p.source.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+$/, "")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-emerald-400 transition-colors inline-flex items-center gap-1"
+                    >
+                      {p.source} <ExternalLink size={12} />
+                    </a>
+                  )}
                 </p>
               </div>
             </ScrollReveal>
@@ -187,10 +217,10 @@ export default function LeadershipPage() {
             </div>
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                On Research Culture
+                On Teams & Culture
               </h2>
               <p className="text-base text-muted mt-1">
-                How the team is built to think — the standards behind the work
+                How people and organizations actually work — not how org charts say they should
               </p>
             </div>
           </div>
@@ -203,8 +233,18 @@ export default function LeadershipPage() {
                 <h3 className="text-lg font-bold text-foreground mb-3">
                   &ldquo;{p.principle}&rdquo;
                 </h3>
-                <p className="text-base text-muted leading-relaxed">
+                <p className="text-base text-muted leading-relaxed mb-4">
                   {p.elaboration}
+                </p>
+                <p className="text-sm text-muted/50 italic">
+                  <a
+                    href={`https://zennmaster.substack.com/p/${p.source.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+$/, "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-emerald-400 transition-colors inline-flex items-center gap-1"
+                  >
+                    {p.source} <ExternalLink size={12} />
+                  </a>
                 </p>
               </div>
             </ScrollReveal>
@@ -212,8 +252,35 @@ export default function LeadershipPage() {
         </div>
       </Section>
 
-      {/* GFBI Charter — philosophy operationalized */}
+      {/* Substack callout */}
       <Section>
+        <ScrollReveal>
+          <div className="glass-card glow-border rounded-2xl p-8 md:p-10 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-400 mb-3">
+              The Writing
+            </p>
+            <h3 className="text-xl font-bold text-foreground mb-2">
+              &ldquo;Theorizing about the world with no data to back it up&rdquo;
+            </h3>
+            <p className="text-base text-muted mb-6 max-w-2xl mx-auto">
+              A Substack newsletter on behavioral economics, social comparison, cognitive warfare,
+              market memory, and the sociology of who counts. Where the principles above get argued
+              through before they become operating decisions.
+            </p>
+            <a
+              href="https://zennmaster.substack.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-base font-medium text-emerald-400 hover:text-emerald-300 transition-colors"
+            >
+              Read on Substack <ExternalLink size={16} />
+            </a>
+          </div>
+        </ScrollReveal>
+      </Section>
+
+      {/* GFBI Charter */}
+      <Section alt>
         <ScrollReveal>
           <div className="glass-card rounded-2xl p-8 md:p-10">
             <div className="flex items-start gap-5 mb-6">
@@ -275,7 +342,7 @@ export default function LeadershipPage() {
       </Section>
 
       {/* Career Ladder */}
-      <Section alt>
+      <Section>
         <ScrollReveal>
           <div className="flex items-start gap-5 mb-10">
             <div className="shrink-0 w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
@@ -324,7 +391,7 @@ export default function LeadershipPage() {
       </Section>
 
       {/* Hiring & Culture */}
-      <Section>
+      <Section alt>
         <div className="grid md:grid-cols-2 gap-8">
           <ScrollReveal>
             <div className="glass-card rounded-2xl p-8 h-full">
