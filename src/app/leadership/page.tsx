@@ -125,15 +125,15 @@ export default function LeadershipPage() {
               </div>
               <div>
                 <p className="text-sm font-semibold uppercase tracking-widest text-emerald-400 mb-3">
-                  Why it matters for VP evaluators
+                  What this enabled
                 </p>
                 <ul className="space-y-2">
                   {[
-                    "Defined the mission — not inherited it",
-                    "Built the team — from zero headcount to a functioning unit",
-                    "Designed the operating model — not just executed within one",
-                    "Created institutional knowledge — culture book, career ladder",
-                    "Made the org self-sustaining — the unit outlasts its founder",
+                    "Research became a standing input to product decisions, not a reactive service",
+                    "New hires ramped in weeks, not months — operating model was documented",
+                    "Cross-functional teams began requesting research proactively",
+                    "Insights survived team transitions — institutional knowledge was codified",
+                    "The unit continued to operate during leadership transitions",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2 text-base text-muted">
                       <ChevronRight size={14} className="mt-0.5 shrink-0 text-emerald-400" />
